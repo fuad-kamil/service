@@ -15,6 +15,42 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
+  const prefixText = t('heroTitlePrefix');
+  const highlightText = t('heroTitleHighlight');
+  const [typedPrefix, setTypedPrefix] = useState('');
+  const [typedHighlight, setTypedHighlight] = useState('');
+
+  useEffect(() => {
+    setTypedPrefix('');
+    setTypedHighlight('');
+    let i = 0;
+    let j = 0;
+    let highlightInterval;
+
+    const prefixInterval = setInterval(() => {
+      if (i < prefixText.length) {
+        setTypedPrefix((prev) => prev + prefixText.charAt(i));
+        i++;
+      } else {
+        clearInterval(prefixInterval);
+        
+        highlightInterval = setInterval(() => {
+          if (j < highlightText.length) {
+            setTypedHighlight((prev) => prev + highlightText.charAt(j));
+            j++;
+          } else {
+            clearInterval(highlightInterval);
+          }
+        }, 60);
+      }
+    }, 60);
+
+    return () => {
+      clearInterval(prefixInterval);
+      if (highlightInterval) clearInterval(highlightInterval);
+    };
+  }, [prefixText, highlightText]);
+
   const stats = [
     { value: '500+', label: t('providerDashboard') === 'የአቅራቢ ዳሽቦርድ' ? 'አገልግሎት አቅራቢዎች' : 'Service Providers' },
     { value: '50+', label: t('categories') },
@@ -57,8 +93,12 @@ export default function HomePage() {
             {t('verifiedBanner')}
           </div>
 
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 opacity-0 animate-fade-in-up animation-delay-150">
-            {t('heroTitlePrefix')}<span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">{t('heroTitleHighlight')}</span>
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 min-h-[120px] sm:min-h-[160px] lg:min-h-[200px] text-center">
+            {typedPrefix}
+            <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+              {typedHighlight}
+            </span>
+            <span className="inline-block w-1 h-8 sm:h-12 lg:h-16 bg-blue-500 ml-1.5 animate-pulse align-middle" />
           </h1>
           <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 opacity-0 animate-fade-in-up animation-delay-300">
             {t('heroSubtitle')}

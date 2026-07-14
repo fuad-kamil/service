@@ -93,7 +93,7 @@ const translations = {
 
     // Hero Section
     verifiedBanner: 'የተረጋገጡ አቅራቢዎች — ግልጽ የዋጋ ዝርዝር',
-    heroTitlePrefix: 'ሳይሄዱ ',
+    heroTitlePrefix: 'ከመሄድዎ በፊት ',
     heroTitleHighlight: 'ዋጋውን ይወቁ',
     heroSubtitle: 'በሆስፒታሎች፣ ክሊኒኮች፣ ባለሙያዎችና ድርጅቶች የሚሰጡ አገልግሎቶችን ይፈልጉና ያወዳድሩ። እውነተኛ ዋጋ፣ ያለ ተጨማሪ ክፍያ።',
     searchPlaceholder: 'ለምሳሌ "የደም ምርመራ"፣ "ቧንቧ ሰራተኛ"፣ "አስተማሪ"...',
@@ -135,7 +135,7 @@ const translations = {
     ctaDesc: 'አገልግሎቶችዎን በግልጽ የዋጋ ዝርዝር ያስመዝግቡ እና አገልግሎትዎን በሚፈልጉ በሺዎች በሚቆጠሩ ደንበኞች ይገኙ።',
 
     // Footer
-    tagline: 'ሳይሄዱ ዋጋውን ይወቁ። በአቅራቢያዎ ያሉ አገልግሎቶችን ወዲያውኑ ያግኙና ያወዳድሩ።',
+    tagline: 'ከመሄድዎ በፊት ዋጋውን ይወቁ። በአቅራቢያዎ ያሉ አገልግሎቶችን ወዲያውኑ ያግኙና ያወዳድሩ።',
     explore: 'አስስ',
     forProviders: 'ለአቅራቢዎች',
     listYourServices: 'አገልግሎቶችዎን ይዘርዝሩ',

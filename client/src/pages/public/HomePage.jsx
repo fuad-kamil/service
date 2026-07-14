@@ -52,20 +52,20 @@ export default function HomePage() {
         <div className="absolute top-48 right-1/4 w-48 h-48 bg-purple-500/5 rounded-full blur-3xl" />
 
         <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-medium mb-6 opacity-0 animate-fade-in-up">
             <Shield className="w-3.5 h-3.5" />
             {t('verifiedBanner')}
           </div>
 
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 opacity-0 animate-fade-in-up animation-delay-150">
             {t('heroTitlePrefix')}<span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">{t('heroTitleHighlight')}</span>
           </h1>
-          <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10">
+          <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 opacity-0 animate-fade-in-up animation-delay-300">
             {t('heroSubtitle')}
           </p>
 
           {/* Search bar */}
-          <form onSubmit={handleSearch} className="flex gap-2 max-w-2xl mx-auto mb-4">
+          <form onSubmit={handleSearch} className="flex gap-2 max-w-2xl mx-auto mb-4 opacity-0 animate-fade-in-up animation-delay-450">
             <div className="flex-1 relative">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
               <input
@@ -80,7 +80,7 @@ export default function HomePage() {
               {t('searchButton')} <ArrowRight className="w-4 h-4" />
             </button>
           </form>
-          <p className="text-slate-500 text-sm">{t('popularLabel')}: <button onClick={() => navigate('/search?search=CBC test')} className="text-blue-400 hover:underline cursor-pointer">CBC test</button>, <button onClick={() => navigate('/search?search=plumber')} className="text-blue-400 hover:underline cursor-pointer">plumber</button>, <button onClick={() => navigate('/search?search=electrician')} className="text-blue-400 hover:underline cursor-pointer">electrician</button>, <button onClick={() => navigate('/search?search=CT scan')} className="text-blue-400 hover:underline cursor-pointer">CT scan</button></p>
+          <p className="text-slate-500 text-sm opacity-0 animate-fade-in-up animation-delay-450">{t('popularLabel')}: <button onClick={() => navigate('/search?search=CBC test')} className="text-blue-400 hover:underline cursor-pointer">CBC test</button>, <button onClick={() => navigate('/search?search=plumber')} className="text-blue-400 hover:underline cursor-pointer">plumber</button>, <button onClick={() => navigate('/search?search=electrician')} className="text-blue-400 hover:underline cursor-pointer">electrician</button>, <button onClick={() => navigate('/search?search=CT scan')} className="text-blue-400 hover:underline cursor-pointer">CT scan</button></p>
         </div>
       </section>
 

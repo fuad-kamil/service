@@ -1,0 +1,277 @@
+[
+  {
+    "_id": "lx57u6s78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Laboratory Tests",
+    "slug": "laboratory-tests",
+    "icon": "🧪",
+    "applicableProviderTypes": [
+      "hospital",
+      "clinic",
+      "diagnostic_center"
+    ],
+    "sortOrder": 1
+  },
+  {
+    "_id": "l4m36zm78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Radiology & Imaging",
+    "slug": "radiology-imaging",
+    "icon": "🩻",
+    "applicableProviderTypes": [
+      "hospital",
+      "clinic",
+      "diagnostic_center"
+    ],
+    "sortOrder": 2
+  },
+  {
+    "_id": "io7wb4s78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Surgery",
+    "slug": "surgery",
+    "icon": "⚕️",
+    "applicableProviderTypes": [
+      "hospital",
+      "clinic"
+    ],
+    "sortOrder": 3
+  },
+  {
+    "_id": "t4thv1k78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Consultation",
+    "slug": "consultation",
+    "icon": "👨‍⚕️",
+    "applicableProviderTypes": [
+      "hospital",
+      "clinic"
+    ],
+    "sortOrder": 4
+  },
+  {
+    "_id": "0w9atai78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Dental",
+    "slug": "dental",
+    "icon": "🦷",
+    "applicableProviderTypes": [
+      "hospital",
+      "clinic"
+    ],
+    "sortOrder": 5
+  },
+  {
+    "_id": "6zjd9vz78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Physiotherapy",
+    "slug": "physiotherapy",
+    "icon": "💪",
+    "applicableProviderTypes": [
+      "hospital",
+      "clinic",
+      "individual"
+    ],
+    "sortOrder": 6
+  },
+  {
+    "_id": "lbvnyfv78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Plumbing",
+    "slug": "plumbing",
+    "icon": "🔧",
+    "applicableProviderTypes": [
+      "individual",
+      "company"
+    ],
+    "sortOrder": 7
+  },
+  {
+    "_id": "r1sp3uk78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Electrical",
+    "slug": "electrical",
+    "icon": "⚡",
+    "applicableProviderTypes": [
+      "individual",
+      "company"
+    ],
+    "sortOrder": 8
+  },
+  {
+    "_id": "ydyfome78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "HVAC & Cooling",
+    "slug": "hvac-cooling",
+    "icon": "❄️",
+    "applicableProviderTypes": [
+      "individual",
+      "company"
+    ],
+    "sortOrder": 9
+  },
+  {
+    "_id": "x8tmedf78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Carpentry",
+    "slug": "carpentry",
+    "icon": "🪚",
+    "applicableProviderTypes": [
+      "individual",
+      "company"
+    ],
+    "sortOrder": 10
+  },
+  {
+    "_id": "gya9y3678090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Painting",
+    "slug": "painting",
+    "icon": "🎨",
+    "applicableProviderTypes": [
+      "individual",
+      "company"
+    ],
+    "sortOrder": 11
+  },
+  {
+    "_id": "1gizayi78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Tutoring",
+    "slug": "tutoring",
+    "icon": "📚",
+    "applicableProviderTypes": [
+      "individual",
+      "institute"
+    ],
+    "sortOrder": 12
+  },
+  {
+    "_id": "6q9x0hu78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Courses & Certifications",
+    "slug": "courses-certifications",
+    "icon": "🎓",
+    "applicableProviderTypes": [
+      "institute",
+      "individual"
+    ],
+    "sortOrder": 13
+  },
+  {
+    "_id": "f02wigu78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Language Training",
+    "slug": "language-training",
+    "icon": "🗣️",
+    "applicableProviderTypes": [
+      "institute",
+      "individual"
+    ],
+    "sortOrder": 14
+  },
+  {
+    "_id": "kfvjtf378090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Construction",
+    "slug": "construction",
+    "icon": "🏗️",
+    "applicableProviderTypes": [
+      "company"
+    ],
+    "sortOrder": 15
+  },
+  {
+    "_id": "gqm0rj578090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Interior Design",
+    "slug": "interior-design",
+    "icon": "🛋️",
+    "applicableProviderTypes": [
+      "individual",
+      "company"
+    ],
+    "sortOrder": 16
+  },
+  {
+    "_id": "10v59gi78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Auto Repair",
+    "slug": "auto-repair",
+    "icon": "🚗",
+    "applicableProviderTypes": [
+      "individual",
+      "company"
+    ],
+    "sortOrder": 17
+  },
+  {
+    "_id": "is0lqtf78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Cleaning Services",
+    "slug": "cleaning-services",
+    "icon": "🧹",
+    "applicableProviderTypes": [
+      "individual",
+      "company"
+    ],
+    "sortOrder": 18
+  },
+  {
+    "_id": "gs5dhsa78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "IT & Tech Support",
+    "slug": "it-tech-support",
+    "icon": "💻",
+    "applicableProviderTypes": [
+      "individual",
+      "company"
+    ],
+    "sortOrder": 19
+  },
+  {
+    "_id": "7kk4k9f78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Legal Services",
+    "slug": "legal-services",
+    "icon": "⚖️",
+    "applicableProviderTypes": [
+      "individual",
+      "company"
+    ],
+    "sortOrder": 20
+  },
+  {
+    "_id": "83552fv78090",
+    "createdAt": "2026-07-14T07:31:18.090Z",
+    "updatedAt": "2026-07-14T07:31:18.090Z",
+    "name": "Accounting & Finance",
+    "slug": "accounting-finance",
+    "icon": "💰",
+    "applicableProviderTypes": [
+      "individual",
+      "company"
+    ],
+    "sortOrder": 21
+  }
+]

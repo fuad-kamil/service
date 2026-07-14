@@ -1,0 +1,56 @@
+[
+  {
+    "_id": "wg6ir2y77700",
+    "createdAt": "2026-07-14T07:31:17.700Z",
+    "updatedAt": "2026-07-14T07:31:17.705Z",
+    "name": "Admin",
+    "email": "admin@servicehub.com",
+    "password": "$2a$10$GuS4mBSAGAoQMp/ZVH9/T.yfj7LfXk6jE2mK.t75tkOwnDBNb52.q",
+    "role": "admin"
+  },
+  {
+    "_id": "4asp33i78093",
+    "createdAt": "2026-07-14T07:31:18.093Z",
+    "updatedAt": "2026-07-14T07:31:18.093Z",
+    "name": "City General Hospital",
+    "email": "hospital@demo.com",
+    "password": "$2a$10$9n8e14yCZ9StvCUz0RgcnOd8Xlvjs7xJOV5MZsVFmmZT3Kq72XAKO",
+    "role": "provider"
+  },
+  {
+    "_id": "tb4egv985684",
+    "createdAt": "2026-07-14T07:44:45.684Z",
+    "updatedAt": "2026-07-14T07:44:45.685Z",
+    "name": "john",
+    "email": "student@example.com",
+    "password": "$2a$10$GOI00CrKvIFq3AYDEB40J.lFsvykf9t/YtlynjNy8.6zVbZckfZxC",
+    "role": "provider"
+  },
+  {
+    "_id": "1rct4dn76632",
+    "createdAt": "2026-07-14T07:47:56.632Z",
+    "updatedAt": "2026-07-14T07:47:56.632Z",
+    "name": "",
+    "email": "admin@skillswap.local",
+    "password": "$2a$10$e29.cXiPIow8sd5blGisl.rGgWcjDGk7Ra8Xdo3.JMrCPi8RsSS/2",
+    "role": "user"
+  },
+  {
+    "_id": "jcv13oq16839",
+    "createdAt": "2026-07-14T08:41:56.840Z",
+    "updatedAt": "2026-07-14T09:08:22.080Z",
+    "name": "fuad",
+    "email": "fuad@gmail.com",
+    "password": "$2a$10$uivId8x7792aDP2OJOqRX.QZpdp1uaeCtDp3T8DPLA2X51mbIzkNm",
+    "role": "provider"
+  },
+  {
+    "_id": "customeruser1001",
+    "createdAt": "2026-07-14T07:31:18.093Z",
+    "updatedAt": "2026-07-14T07:31:18.093Z",
+    "name": "John Customer",
+    "email": "user@demo.com",
+    "password": "$2a$10$9n8e14yCZ9StvCUz0RgcnOd8Xlvjs7xJOV5MZsVFmmZT3Kq72XAKO",
+    "role": "user"
+  }
+]

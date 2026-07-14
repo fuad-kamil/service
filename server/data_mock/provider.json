@@ -1,0 +1,57 @@
+[
+  {
+    "_id": "13g1hfs78247",
+    "createdAt": "2026-07-14T07:31:18.247Z",
+    "updatedAt": "2026-07-14T07:31:18.247Z",
+    "userId": "4asp33i78093",
+    "providerType": "hospital",
+    "businessName": "City General Hospital",
+    "slug": "city-general-hospital",
+    "description": "A leading multi-specialty hospital providing comprehensive healthcare services with state-of-the-art equipment and experienced medical professionals.",
+    "address": {
+      "street": "123 Health Ave",
+      "city": "Addis Ababa",
+      "country": "Ethiopia"
+    },
+    "geoLocation": {
+      "type": "Point",
+      "coordinates": [
+        38.7578,
+        9.0254
+      ]
+    },
+    "contactInfo": {
+      "phone": "+251-11-123-4567",
+      "email": "info@cityhospital.com"
+    },
+    "specialties": [
+      "Cardiology",
+      "Neurology",
+      "Orthopedics",
+      "Radiology"
+    ],
+    "verified": true,
+    "status": "active",
+    "averageRating": 4.5,
+    "reviewCount": 120
+  },
+  {
+    "_id": "2yickng17132",
+    "createdAt": "2026-07-14T08:41:57.132Z",
+    "updatedAt": "2026-07-14T09:08:22.078Z",
+    "userId": "jcv13oq16839",
+    "businessName": "good ",
+    "slug": "good",
+    "providerType": "individual",
+    "description": "",
+    "address": {
+      "city": "addis ababa"
+    },
+    "contactInfo": {
+      "phone": "+"
+    },
+    "profession": "yelenm",
+    "licenseNumber": "",
+    "status": "active"
+  }
+]

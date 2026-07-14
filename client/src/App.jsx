@@ -64,12 +64,16 @@ function ProtectedRoute({ children, allowedRoles }) {
 }
 
 
+import useThemeStore from './store/useThemeStore';
+
 export default function App() {
   const { fetchMe } = useAuthStore();
+  const { initTheme } = useThemeStore();
 
   useEffect(() => {
+    initTheme();
     fetchMe();
-  }, [fetchMe]);
+  }, [fetchMe, initTheme]);
 
   return (
     <Router>

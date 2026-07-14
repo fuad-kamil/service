@@ -1,11 +1,15 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Search, Menu, X, MapPin, Bell, BookmarkCheck, LogOut, User, LayoutDashboard, ChevronDown } from 'lucide-react';
+import { Search, Menu, X, MapPin, Bell, BookmarkCheck, LogOut, User, LayoutDashboard, ChevronDown, Sun, Moon } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import useAuthStore from '../../store/useAuthStore';
+import useLanguageStore from '../../store/useLanguageStore';
+import useThemeStore from '../../store/useThemeStore';
 import toast from 'react-hot-toast';
 
 export default function Navbar() {
   const { user, logout } = useAuthStore();
+  const { language, setLanguage, t } = useLanguageStore();
+  const { theme, toggleTheme } = useThemeStore();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropOpen, setDropOpen] = useState(false);
@@ -44,13 +48,31 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6">
-            <Link to="/search" className="text-slate-400 hover:text-white transition-colors text-sm">Browse Services</Link>
-            <Link to="/categories" className="text-slate-400 hover:text-white transition-colors text-sm">Categories</Link>
-            <Link to="/about" className="text-slate-400 hover:text-white transition-colors text-sm">About</Link>
+            <Link to="/search" className="text-slate-400 hover:text-white transition-colors text-sm">{t('browseServices')}</Link>
+            <Link to="/categories" className="text-slate-400 hover:text-white transition-colors text-sm">{t('categories')}</Link>
+            <Link to="/about" className="text-slate-400 hover:text-white transition-colors text-sm">{t('about')}</Link>
           </div>
 
           {/* Right side */}
           <div className="hidden md:flex items-center gap-3">
+            {/* Language Switcher */}
+            <button
+              onClick={() => setLanguage(language === 'en' ? 'am' : 'en')}
+              className="px-2.5 py-1 text-xs font-semibold rounded border border-white/10 hover:border-white/20 text-slate-300 hover:text-white transition-colors cursor-pointer mr-1"
+              title={language === 'en' ? 'Switch to Amharic' : 'ወደ እንግሊዝኛ ቀይር'}
+            >
+              {language === 'en' ? 'አማ' : 'EN'}
+            </button>
+
+            {/* Theme Switcher */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors cursor-pointer mr-2"
+              aria-label="Toggle Theme"
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-blue-500" />}
+            </button>
+
             {user ? (
               <div className="relative" ref={dropRef}>
                 <button onClick={() => setDropOpen(!dropOpen)} className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors">
@@ -63,27 +85,27 @@ export default function Navbar() {
                 {dropOpen && (
                   <div className="absolute right-0 mt-2 w-52 bg-[#0a1628] border border-white/10 rounded-xl shadow-2xl py-2 z-50">
                     <Link to={getDashboardLink()} className="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-300 hover:bg-white/5 hover:text-white transition-colors" onClick={() => setDropOpen(false)}>
-                      <LayoutDashboard className="w-4 h-4" /> Dashboard
+                      <LayoutDashboard className="w-4 h-4" /> {t('dashboard')}
                     </Link>
                     {user.role === 'user' && (
                       <Link to="/dashboard/saved" className="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-300 hover:bg-white/5 hover:text-white transition-colors" onClick={() => setDropOpen(false)}>
-                        <BookmarkCheck className="w-4 h-4" /> Saved Providers
+                        <BookmarkCheck className="w-4 h-4" /> {t('savedProviders')}
                       </Link>
                     )}
                     <Link to={user.role === 'user' ? '/dashboard/profile' : '/provider/profile'} className="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-300 hover:bg-white/5 hover:text-white transition-colors" onClick={() => setDropOpen(false)}>
-                      <User className="w-4 h-4" /> Profile
+                      <User className="w-4 h-4" /> {t('profile')}
                     </Link>
                     <div className="border-t border-white/10 my-1" />
                     <button onClick={handleLogout} className="flex items-center gap-3 px-4 py-2.5 text-sm text-red-400 hover:bg-red-500/10 w-full transition-colors">
-                      <LogOut className="w-4 h-4" /> Sign Out
+                      <LogOut className="w-4 h-4" /> {t('signOut')}
                     </button>
                   </div>
                 )}
               </div>
             ) : (
               <>
-                <Link to="/login" className="text-sm text-slate-300 hover:text-white transition-colors px-4 py-2">Sign In</Link>
-                <Link to="/register" className="text-sm bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors font-medium">Get Started</Link>
+                <Link to="/login" className="text-sm text-slate-300 hover:text-white transition-colors px-4 py-2">{t('signIn')}</Link>
+                <Link to="/register" className="text-sm bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors font-medium">{t('getStarted')}</Link>
               </>
             )}
           </div>
@@ -98,19 +120,38 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-[#0a1628] border-t border-white/5 px-4 py-4 space-y-3">
-          <Link to="/search" className="block text-slate-300 hover:text-white py-2" onClick={() => setMenuOpen(false)}>Browse Services</Link>
-          <Link to="/categories" className="block text-slate-300 hover:text-white py-2" onClick={() => setMenuOpen(false)}>Categories</Link>
-          <Link to="/about" className="block text-slate-300 hover:text-white py-2" onClick={() => setMenuOpen(false)}>About</Link>
+          {/* Toggles */}
+          <div className="flex items-center justify-between pb-3 border-b border-white/5">
+            <span className="text-xs font-semibold text-slate-400">Settings / ቅንብሮች</span>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setLanguage(language === 'en' ? 'am' : 'en')}
+                className="px-2.5 py-1 text-xs font-bold rounded border border-white/10 text-slate-300"
+              >
+                {language === 'en' ? 'አማርኛ' : 'English'}
+              </button>
+              <button
+                onClick={toggleTheme}
+                className="p-1.5 rounded-lg text-slate-400 hover:text-white"
+              >
+                {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-blue-500" />}
+              </button>
+            </div>
+          </div>
+
+          <Link to="/search" className="block text-slate-300 hover:text-white py-2" onClick={() => setMenuOpen(false)}>{t('browseServices')}</Link>
+          <Link to="/categories" className="block text-slate-300 hover:text-white py-2" onClick={() => setMenuOpen(false)}>{t('categories')}</Link>
+          <Link to="/about" className="block text-slate-300 hover:text-white py-2" onClick={() => setMenuOpen(false)}>{t('about')}</Link>
           <div className="border-t border-white/10 pt-3 space-y-2">
             {user ? (
               <>
-                <Link to={getDashboardLink()} className="block text-slate-300 hover:text-white py-2" onClick={() => setMenuOpen(false)}>Dashboard</Link>
-                <button onClick={() => { handleLogout(); setMenuOpen(false); }} className="block text-red-400 py-2">Sign Out</button>
+                <Link to={getDashboardLink()} className="block text-slate-300 hover:text-white py-2" onClick={() => setMenuOpen(false)}>{t('dashboard')}</Link>
+                <button onClick={() => { handleLogout(); setMenuOpen(false); }} className="block text-red-400 py-2">{t('signOut')}</button>
               </>
             ) : (
               <>
-                <Link to="/login" className="block text-slate-300 hover:text-white py-2" onClick={() => setMenuOpen(false)}>Sign In</Link>
-                <Link to="/register" className="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium" onClick={() => setMenuOpen(false)}>Get Started</Link>
+                <Link to="/login" className="block text-slate-300 hover:text-white py-2" onClick={() => setMenuOpen(false)}>{t('signIn')}</Link>
+                <Link to="/register" className="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium" onClick={() => setMenuOpen(false)}>{t('getStarted')}</Link>
               </>
             )}
           </div>
